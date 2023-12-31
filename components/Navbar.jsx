@@ -1,3 +1,6 @@
+import Link from "next/link"
+import { Button } from "./ui/button";
+
 const Navbar =() => {
     return (
       <nav className="bg-gray-800 text-white shadow-lg">
@@ -23,9 +26,9 @@ const Navbar =() => {
   
             {/* Secondary Nav */}
             <div className="hidden md:flex items-center space-x-3">
-              <a href="#" className="py-2 px-3 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-lg transition duration-300">
-                Login
-              </a>
+              <Button>
+                <Link href="/login">Login</Link>
+              </Button>
             </div>
           </div>
         </div>
