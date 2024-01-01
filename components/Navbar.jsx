@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from "next/link";
 import { Button } from "./ui/button";
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +13,15 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
 
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="/" className="text-base font-medium text-gray-500 hover:text-gray-900 flex items-center" passHref>              
-              <img src="/logo.png" alt="Logo" className="h-8 w-8 mr-2"/>
+            <Link href="/" className="text-base font-medium text-gray-500 hover:text-gray-900 flex items-center" passHref>
+              <Image 
+              src="/logo.png"
+              alt="Logo" 
+              className="mr-2"
+              width={100}
+              height={24}
+              priority
+              />
               <span className="font-bold text-xl">RUBIX</span>
             </Link>
           </div>
@@ -39,7 +47,14 @@ const Navbar = () => {
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <img src="../images/logo.png" alt="Logo" className="h-8 w-auto"/>
+                    <Image 
+                      src="/logo.png"
+                      alt="Logo" 
+                      className="mr-2"
+                      width={100}
+                      height={24}
+                      priority
+                    />
                   </div>
                   <div className="-mr-2">
                     <button 
